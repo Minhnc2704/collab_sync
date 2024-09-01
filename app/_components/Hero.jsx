@@ -2,7 +2,8 @@ import React from "react";
 
 function Hero() {
   return (
-    <div className="relative bg-gradient-to-r from-blue-600 to-white" id="home">
+    //<div className="relative bg-gradient-to-r from-blue-600 to-white" id="home">
+    <div className="relative bg-gradient-to-r" id="home">
       {/* Content */}
       <div className="relative z-10">
         <div
@@ -39,33 +40,14 @@ function Hero() {
                 </a>
                 <a
                   href="#"
-                  className="relative flex h-11 w-full items-center justify-center px-6 bg-white hover:bg-gray-200 text-black border border-gray-300 rounded-full transition duration-300 sm:w-max"
+                  className="relative flex h-11 w-full items-center justify-center px-6 bg-white hover:bg-gray-200 text-black rounded-full transition duration-300 sm:w-max"
                 >
                   <span className="relative text-base font-semibold">
                     Learn more
                   </span>
                 </a>
               </div>
-              <div className="hidden py-8 mt-16 border-y border-gray-100 dark:border-gray-800 sm:flex justify-between">
-                <div className="text-left">
-                  <h6 className="text-lg font-semibold text-gray-700 dark:text-white">
-                    The lowest price
-                  </h6>
-                  <p className="mt-2 text-gray-500">Some text here</p>
-                </div>
-                <div className="text-left">
-                  <h6 className="text-lg font-semibold text-gray-700 dark:text-white">
-                    The fastest on the market
-                  </h6>
-                  <p className="mt-2 text-gray-500">Some text here</p>
-                </div>
-                <div className="text-left">
-                  <h6 className="text-lg font-semibold text-gray-700 dark:text-white">
-                    The most loved
-                  </h6>
-                  <p className="mt-2 text-gray-500">Some text here</p>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>

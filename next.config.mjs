@@ -1,4 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+// next.config.mjs
 
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    images: {
+      domains: ['img.freepik.com'], // Add the allowed domain here
+    },
+  };
+
+  export default nextConfig;

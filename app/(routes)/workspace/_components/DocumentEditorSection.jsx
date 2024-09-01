@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DcoumentHeader from "./DcoumentHeader";
+import DocumentHeader from "./DocumentHeader";
 import DocumentInfo from "./DocumentInfo";
 import RichDocumentEditor from "./RichDocumentEditor";
 import { Button } from "@/components/ui/button";
@@ -11,7 +11,7 @@ function DocumentEditorSection({ params }) {
   return (
     <div className="relative">
       {/* Header  */}
-      <DcoumentHeader />
+      {/* <DocumentHeader /> */}
 
       {/* Document Info  */}
       <DocumentInfo params={params} />
@@ -20,7 +20,7 @@ function DocumentEditorSection({ params }) {
 
       <RichDocumentEditor params={params} />
 
-      <div className="fixed right-10 bottom-10 ">
+      <div className="fixed right-1 bottom-1 ">
         <Button onClick={() => setOpenComment(!openComment)}>
           {openComment ? <X /> : <MessageCircle />}{" "}
         </Button>

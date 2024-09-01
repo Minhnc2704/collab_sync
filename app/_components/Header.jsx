@@ -3,6 +3,7 @@ import Logo from "./Logo";
 
 function Header() {
   return (
+    <header className="bg-white text-black py-4">
     <div className="px-5">
       <nav className="w-full flex items-center justify-between py-4">
         {/* Logo and Website Name */}
@@ -23,6 +24,7 @@ function Header() {
         </div>
       </nav>
     </div>
+    </header>
   );
 }
 

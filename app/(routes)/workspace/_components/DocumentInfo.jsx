@@ -11,7 +11,7 @@ import React, { useEffect, useState } from 'react'
 import { toast } from 'sonner';
 
 function DocumentInfo({params}) {
-    const [coverImage,setCoverImage]=useState('/cover.png');
+    const [coverImage,setCoverImage]=useState('/cover.jpg');
     const [emoji,setEmoji]=useState();
     const [documentInfo,setDocumentInfo]=useState();
     useEffect(()=>{

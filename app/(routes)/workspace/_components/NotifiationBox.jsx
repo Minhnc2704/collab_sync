@@ -15,6 +15,7 @@ function NotifiationBox({ children }) {
   const { inboxNotifications } = useInboxNotifications();
   const updateRoomNotificationSettings = useUpdateRoomNotificationSettings();
   const { count, error, isLoading } = useUnreadInboxNotificationsCount();
+
   useEffect(() => {
     updateRoomNotificationSettings({ threads: "all" });
     console.log(count);
@@ -32,12 +33,16 @@ function NotifiationBox({ children }) {
       </PopoverTrigger>
       <PopoverContent className={"w-[500px]"}>
         <InboxNotificationList>
-          {inboxNotifications.map((inboxNotification) => (
-            <InboxNotification
-              key={inboxNotification.id}
-              inboxNotification={inboxNotification}
-            />
-          ))}
+          {inboxNotifications.length > 0 ? (
+            inboxNotifications.map((inboxNotification) => (
+              <InboxNotification
+                key={inboxNotification.id}
+                inboxNotification={inboxNotification}
+              />
+            ))
+          ) : (
+            <div className="text-center p-4">No notification</div>
+          )}
         </InboxNotificationList>
       </PopoverContent>
     </Popover>

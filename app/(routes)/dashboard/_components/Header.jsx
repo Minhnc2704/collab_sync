@@ -18,13 +18,11 @@ function Header() {
     user && saveUserData();
   }, [user]);
 
-  /**
-   * Save user data
-   */
+  /*Save user data*/
   const saveUserData = async () => {
     const docId = user?.primaryEmailAddress?.emailAddress;
     try {
-      await setDoc(doc(db, "LoopUsers", docId), {
+      await setDoc(doc(db, "Users", docId), {
         name: user?.fullName,
         avatar: user?.imageUrl,
         email: user?.primaryEmailAddress?.emailAddress,

@@ -48,9 +48,10 @@ function RichDocumentEditor({ params }) {
       doc(db, "documentOutput", params?.documentid),
       (doc) => {
         if (
-          doc.data()?.editedBy != user?.primaryEmailAddress?.emailAddress ||
-          isFetched == false
+          !isFetched ||
+          doc.data()?.editedBy != user?.primaryEmailAddress?.emailAddress
         )
+          //doc.data()?.output && editor.render(doc.data()?.output);
           doc.data().editedBy && editor?.render(JSON.parse(doc.data()?.output));
         isFetched = true;
       }
@@ -58,7 +59,7 @@ function RichDocumentEditor({ params }) {
   };
 
   const InitEditor = () => {
-    if (!editor?.current) {
+    if (!ref?.current) {
       editor = new EditorJS({
         onChange: (api, event) => {
           SaveDocument();
@@ -120,8 +121,8 @@ function RichDocumentEditor({ params }) {
     }
   };
   return (
-    <div className=" ">
-      <div id="editorjs" className="w-[70%]"></div>
+    <div className="">
+      <div id="editorjs" className="w-[95%]"></div>
       <div className="fixed bottom-10 md:ml-80 left-0 z-10">
         <GenerateAITemplate
           setGenerateAIOutput={(output) => editor?.render(output)}

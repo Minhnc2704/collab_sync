@@ -13,7 +13,7 @@ import React, { useState } from "react";
 import uuid4 from "uuid4";
 
 function CreateWorkspace() {
-  const [coverImage, setCoverImage] = useState("/cover.png");
+  const [coverImage, setCoverImage] = useState("/cover.jpg");
   const [workspaceName, setWorkspaceName] = useState();
   const [emoji, setEmoji] = useState();
   const { user } = useUser();
@@ -83,7 +83,7 @@ function CreateWorkspace() {
         <div className="p-12">
           <h2 className="font-medium text-xl">Create a new workspace</h2>
           <h2 className="text-sm mt-2">
-            This is a shared space where you can collaborate wth your team. You
+            This is a shared space where you can collaborate with your team. You
             can always rename it later.
           </h2>
           <div className="mt-8 flex gap-2 items-center">

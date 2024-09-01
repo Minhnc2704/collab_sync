@@ -27,8 +27,9 @@ function WorkspaceItemList({ workspaceList }) {
               className="h-[150px] object-cover rounded-t-xl"
             />
             <div className="p-4 rounded-b-xl">
-              <h2 className="flex gap-2">
-                {workspace?.emoji} {workspace.workspaceName}
+              <h2 className="flex gap-2 justify-center">
+                {workspace?.emoji}
+                {workspace.workspaceName}
               </h2>
             </div>
           </div>

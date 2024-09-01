@@ -15,7 +15,7 @@ export function Room({ children, params }) {
       authEndpoint={"/api/liveblocks-auth?roomId=" + params?.documentid}
       resolveUsers={async ({ userIds }) => {
         const q = query(
-          collection(db, "LoopUsers"),
+          collection(db, "Users"),
           where("email", "in", userIds)
         );
         const querySnapshot = await getDocs(q);
@@ -28,7 +28,7 @@ export function Room({ children, params }) {
       }}
       resolveMentionSuggestions={async ({ text, roomId }) => {
         const q = query(
-          collection(db, "LoopUsers"),
+          collection(db, "Users"),
           where("email", "!=", null)
         );
         const querySnapshot = await getDocs(q);

@@ -39,13 +39,13 @@ function GenerateAITemplate({ setGenerateAIOutput }) {
         className="flex gap-2"
         onClick={() => setOpen(true)}
       >
-        <LayoutGrid className="h-4 w-4" /> Generate AI Template
+        <LayoutGrid className="h-4 w-4" /> Gemini Template
       </Button>
 
       <Dialog open={open}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Generate AI Template</DialogTitle>
+            <DialogTitle>Gemini Template</DialogTitle>
             <DialogDescription>
               <div>
                 <h2 className="mt-5">What you want to write in document?</h2>
